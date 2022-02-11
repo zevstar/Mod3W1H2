@@ -10,11 +10,29 @@ import java.util.Set;
 public class ArraysMapsHW {
 	
 	
-	private void sysout() {
-		// TODO Auto-generated method stub
+//	private void sysout() {
+//		// TODO Auto-generated method stub
 
+//	}
+
+	public static boolean getUp(boolean squawking, int currentHour) {
+		
+			if (squawking) {
+				if (currentHour < 0 || currentHour > 2300) {
+					return false;
+				} else if (currentHour < 600 || currentHour > 2200) {
+					return true;
+				} else
+					return false;
+			}else {
+				return false;
+		
+			}
 	}
-
+	
+	
+	
+	
 	public static void main(String[] args) {
 		// copy 1 array list
 		ArrayList<Integer> nums = new ArrayList<Integer>();
@@ -138,22 +156,14 @@ public class ArraysMapsHW {
 			}
 		}
 		
+		System.out.println(getUp(true, 4500));
+		System.out.println(getUp(true, 500));
+		System.out.println(getUp(false, -100));
+		System.out.println(getUp(false, 500));
+		
 	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 	}
-	
-	
 	
 	
 
